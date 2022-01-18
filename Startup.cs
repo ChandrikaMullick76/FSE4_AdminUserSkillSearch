@@ -48,6 +48,7 @@ namespace AdminUserSkillSearch
                     }
                 });
             });
+            services.AddCors();
             services.AddControllers();
 
             services.AddSingleton<UserSkillProfileService>();
@@ -73,6 +74,11 @@ namespace AdminUserSkillSearch
                 c.RoutePrefix = string.Empty;
             });
 
+            app.UseCors(
+              builder => builder
+                           .AllowAnyOrigin()
+                           .AllowAnyMethod()
+                           .AllowAnyHeader());
             app.UseRouting();
 
             app.UseAuthorization();
