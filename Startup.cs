@@ -44,7 +44,7 @@ namespace AdminUserSkillSearch
                     Contact = new OpenApiContact
                     {
                         Name = "Chandrika Mullick",
-                        Email = string.Empty
+                        Email = "chandrika.mullick@cognizant.com"
                     }
                 });
             });
